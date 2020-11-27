@@ -17,7 +17,7 @@
     
     <title><?= $title ?></title>
   </head>
-  <body class="hold-transition <?= $page ?>">
+  <body class="hold-transition <?= $page ?> eagle-1-bg">
     
     <?= $this->renderSection('content') ?>
     

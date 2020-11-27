@@ -1,0 +1,9 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+@each $name, $color in v.$colors {
+  .#{$name} {
+    @include m.choose-colors(#{$color});
+  }
+}
+                                                                                                                                                                                                                                                                                                            

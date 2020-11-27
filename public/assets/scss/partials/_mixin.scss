@@ -1,0 +1,13 @@
+@mixin choose-colors($color) {
+  &-text {
+    color: $color;
+
+    &:hover, &:active {
+      color: $color;
+    }
+  }
+  &-bg {
+    background: $color;
+  }
+}
+                                                                                                                                                                                                                                                                                                            

@@ -1,9 +1,135 @@
-body {
-  background: #130f40 !important;
+.frog-text {
+  color: #7ed6df;
+}
+.frog-text:hover, .frog-text:active {
+  color: #7ed6df;
+}
+.frog-bg {
+  background: #7ed6df;
 }
 
-.card .login-card-body {
+.frog-1-text {
+  color: #22a6b3;
+}
+.frog-1-text:hover, .frog-1-text:active {
+  color: #22a6b3;
+}
+.frog-1-bg {
+  background: #22a6b3;
+}
+
+.elephant-text {
+  color: #686de0;
+}
+.elephant-text:hover, .elephant-text:active {
+  color: #686de0;
+}
+.elephant-bg {
+  background: #686de0;
+}
+
+.elephant-1-text {
+  color: #4834d4;
+}
+.elephant-1-text:hover, .elephant-1-text:active {
+  color: #4834d4;
+}
+.elephant-1-bg {
+  background: #4834d4;
+}
+
+.eagle-text {
+  color: #30336b;
+}
+.eagle-text:hover, .eagle-text:active {
+  color: #30336b;
+}
+.eagle-bg {
   background: #30336b;
+}
+
+.eagle-1-text {
+  color: #130f40;
+}
+.eagle-1-text:hover, .eagle-1-text:active {
+  color: #130f40;
+}
+.eagle-1-bg {
+  background: #130f40;
+}
+
+.shark-text {
+  color: #95afc0;
+}
+.shark-text:hover, .shark-text:active {
+  color: #95afc0;
+}
+.shark-bg {
+  background: #95afc0;
+}
+
+.shark-1-text {
+  color: #535c68;
+}
+.shark-1-text:hover, .shark-1-text:active {
+  color: #535c68;
+}
+.shark-1-bg {
+  background: #535c68;
+}
+
+.snake-text {
+  color: #dff9fb;
+}
+.snake-text:hover, .snake-text:active {
+  color: #dff9fb;
+}
+.snake-bg {
+  background: #dff9fb;
+}
+
+.snake-1-text {
+  color: #c7ecee;
+}
+.snake-1-text:hover, .snake-1-text:active {
+  color: #c7ecee;
+}
+.snake-1-bg {
+  background: #c7ecee;
+}
+
+a.text-link {
+  transition: ease-in-out 0.2s;
+}
+a.text-link:hover {
+  opacity: 0.7;
+}
+
+form.form-only-line .input-group:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #7ed6df;
+  border-radius: 3px;
+}
+form.form-only-line input, form.form-only-line .input-group-text {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+form.form-only-line input {
+  padding-left: 0;
+  color: #95afc0;
+}
+form.form-only-line input:focus, form.form-only-line input:hover {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  font-size: 17px;
+  color: #22a6b3;
+}
+form.form-only-line input:placeholder {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=auth-layout.css.map */

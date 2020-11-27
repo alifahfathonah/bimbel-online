@@ -1,10 +1,47 @@
-body {
-  background: #130f40 !important;
+@use '../partials/classes' as c;
+@use '../partials/variables' as v;
+@use "sass:map";
+
+a.text-link {
+  transition: ease-in-out .2s;
+  
+  &:hover {
+    opacity: .7;
+  }
 }
 
-.card {
-  .login-card-body {
-    background: #30336b;
+form.form-only-line {
+  .input-group {
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid map.get(v.$colors, "frog");
+      border-radius: 3px;
+    }
+  }
+  
+  input, .input-group-text {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  
+  input {
+    padding-left: 0;
+    color: map.get(v.$colors, "shark");
+    
+    &:focus, &:hover {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      font-size: 17px;
+      color: map.get(v.$colors, "frog-1");
+    }
+    
+    &:placeholder {
+      font-size: 16px;
+    }
   }
 }
                                                                                                                                                                                                                                                                                                             

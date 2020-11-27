@@ -9,12 +9,12 @@
     </div>
     <!-- /.login-logo -->
     <div class="card">
-      <div class="card-body login-card-body">
+      <div class="card-body login-card-body eagle-bg snake-text">
         <p class="login-box-msg">Sign in to start your session</p>
         
         <?= view('Myth\Auth\Views\_message_block') ?>
         
-        <form action="<?= base_url() ?>/login" method="post">
+        <form action="<?= base_url() ?>/login" method="post" class="form-only-line" autocomplete="off">
           <?= csrf_field() ?>
           
           <?php if ($config->validFields === ['email']): ?>
@@ -82,13 +82,13 @@
         
         <?php if ($config->activeResetter): ?>
           <p class="mb-1">
-            <a href="<?= base_url() ?>/forgot"><?= lang('Auth.forgotYourPassword') ?></a>
+            <a href="<?= base_url() ?>/forgot" class="text-link frog-text"><?= lang('Auth.forgotYourPassword') ?></a>
           </p>
         <?php endif; ?>
         
         <?php if ($config->allowRegistration) : ?>
           <p class="mb-0">
-            <a href="<?= base_url() ?>/register" class="text-center"><?= lang('Auth.needAnAccount') ?></a>
+            <a href="<?= base_url() ?>/register" class="text-center text-link frog-text"><?= lang('Auth.needAnAccount') ?></a>
           </p>
         <?php endif; ?>
       </div>
