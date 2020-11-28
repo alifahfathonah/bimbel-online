@@ -201,26 +201,34 @@ form.form-only-line .input-group.active:after {
   border-radius: 3px;
   opacity: 1;
 }
-form.form-only-line input, form.form-only-line .input-group-text {
+form.form-only-line .input-group-text {
   border: none;
   box-shadow: none;
   background: transparent;
 }
-form.form-only-line input {
+form.form-only-line input, form.form-only-line input:-webkit-autofill {
   padding-left: 0;
-  color: #95afc0;
   transition: all 0.3s;
   font-size: 17px;
-}
-form.form-only-line input:focus, form.form-only-line input:hover {
   border: none;
-  box-shadow: none;
   background: transparent;
-  color: #dff9fb;
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0px 1000px #30336b inset;
+  color: #95afc0;
+  -webkit-text-fill-color: #95afc0;
 }
-form.form-only-line input:placeholder {
+form.form-only-line input:focus, form.form-only-line input:hover, form.form-only-line input:-webkit-autofill:focus, form.form-only-line input:-webkit-autofill:hover, form.form-only-line input:-webkit-autofill:focus, form.form-only-line input:-webkit-autofill:hover, form.form-only-line input:-webkit-autofill:-webkit-autofill:focus, form.form-only-line input:-webkit-autofill:-webkit-autofill:hover {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0px 1000px #30336b inset;
+  color: #dff9fb;
+  -webkit-text-fill-color: #dff9fb;
+}
+form.form-only-line input:placeholder, form.form-only-line input:-webkit-autofill:placeholder {
   font-size: 16px;
   color: #535c68;
+  -webkit-text-fill-color: #535c68;
 }
 
 .frog-btn.outline-btn {
