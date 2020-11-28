@@ -68,9 +68,10 @@ class AuthController extends Controller
 	public function attemptLogin()
 	{
 		$rules = [
-			'login'	=> 'required',
-			'password' => 'required',
+      'login'    => ['label' => 'email / username', 'rules' => 'required'],
+      'password' => 'required',
 		];
+		
 		if ($this->config->validFields == ['email'])
 		{
 			$rules['login'] .= '|valid_email';
@@ -81,9 +82,9 @@ class AuthController extends Controller
 			return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
 		}
 
-		$login = $this->request->getPost('login');
-		$password = $this->request->getPost('password');
-		$remember = (bool)$this->request->getPost('remember');
+    $login    = $this->request->getPost('login');
+    $password = $this->request->getPost('password');
+    $remember = (bool)$this->request->getPost('remember');
 
 		// Determine credential type
 		$type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
@@ -128,13 +129,13 @@ class AuthController extends Controller
 	 */
 	public function register()
 	{
-        // check if already logged in.
+    // check if already logged in.
 		if ($this->auth->check())
 		{
 			return redirect()->back();
 		}
 
-        // Check if registration is allowed
+    // Check if registration is allowed
 		if (! $this->config->allowRegistration)
 		{
 			return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
@@ -159,10 +160,10 @@ class AuthController extends Controller
 		// Validate here first, since some things,
 		// like the password, can only be validated properly here.
 		$rules = [
-			'username'  	=> 'required|alpha_numeric_space|min_length[3]|is_unique[users.username]',
-			'email'			=> 'required|valid_email|is_unique[users.email]',
-			'password'	 	=> 'required|strong_password',
-			'pass_confirm' 	=> 'required|matches[password]',
+      'username'      => 'required|alpha_numeric_space|min_length[3]|is_unique[users.username]',
+      'email'         => 'required|valid_email|is_unique[users.email]',
+      'password'      => 'required|strong_password',
+      'pass_confirm'  => 'required|matches[password]',
 		];
 
 		if (! $this->validate($rules))

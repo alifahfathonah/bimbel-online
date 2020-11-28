@@ -65,14 +65,14 @@ if (! function_exists('in_groups'))
 	function in_groups($groups): bool
 	{
 		$authenticate = Services::authentication();
-        $authorize    = Services::authorization();
+    $authorize    = Services::authorization();
 
-        if ($authenticate->check())
-        {
-            return $authorize->inGroup($groups, $authenticate->id());
-        }
+    if ($authenticate->check())
+    {
+      return $authorize->inGroup($groups, $authenticate->id());
+    }
 
-        return false;
+    return false;
 	}
 }
 
@@ -89,13 +89,13 @@ if (! function_exists('has_permission'))
 	function has_permission($permission): bool
 	{
 		$authenticate = Services::authentication();
-        $authorize    = Services::authorization();
+    $authorize    = Services::authorization();
 
-        if ($authenticate->check())
-        {
-            return $authorize->hasPermission($permission, $authenticate->id()) ?? false;
-        }
+    if ($authenticate->check())
+    {
+        return $authorize->hasPermission($permission, $authenticate->id()) ?? false;
+    }
 
-        return false;
+    return false;
 	}
 }

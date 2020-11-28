@@ -33,7 +33,7 @@
   					<!-- /.invalid-feedback -->
           <?php else: ?>
             <div class="input-group <?= session('errors.login') ? 'is-invalid' : '' ?>">
-              <input type="text" class="form-control" placeholder="Email or Username" name="login" value="<?= old('login') ?>" />
+              <input type="text" class="form-control" placeholder="Email / Username" name="login" value="<?= old('login') ?>" />
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-fw fa-user"></span>
