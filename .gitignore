@@ -129,3 +129,4 @@ nb-configuration.xml
 nova
 nova.pub
 public/backup/*
+app/Config/Email.php
