@@ -1,7 +1,7 @@
-## Bimbel Online
-Are you looking for an app for learning and teaching online quickly, easily, and securely? <b>Bimbel Online</b> is the solution that works for you.
+## Bimbel Online (Bimbline)
+Are you looking for an app for learning and teaching online quickly, easily, and securely? <b>Bimbel Online (Bimbline)</b> is the solution that works for you.
 
-with the various features and conveniences that <b>Bimbel Online</b> give you, it will be very helpful and useful.
+with the various features and conveniences that <b>Bimbel Online (Bimbline)</b> give you, it will be very helpful and useful.
 
 ### Features
 - login
