@@ -140,8 +140,14 @@ class AuthController extends Controller
 		{
 			return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
 		}
-
-		return $this->_render($this->config->views['register'], ['config' => $this->config]);
+    
+    $data = [
+      'config' => $this->config,
+      'title'  => 'Sign In - Bimbel Online',
+      'page'   => 'login-page'
+    ];
+    
+		return $this->_render($this->config->views['register'], $data);
 	}
 
 	/**

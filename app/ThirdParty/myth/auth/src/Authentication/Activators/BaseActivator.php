@@ -1,5 +1,7 @@
 <?php namespace Myth\Auth\Authentication\Activators;
 
+use Myth\Auth\Config\Auth;
+
 class BaseActivator
 {
     protected $config;
@@ -11,6 +13,12 @@ class BaseActivator
      *
      * @return $this
      */
+     
+    public function __construct(Auth $config)
+    {
+        $this->config = $config;
+    }
+    
     public function setConfig($config)
     {
         $this->config = $config;

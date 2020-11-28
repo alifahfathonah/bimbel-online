@@ -14,7 +14,7 @@
         
         <?= view('Myth\Auth\Views\_message_block') ?>
         
-        <form action="<?= base_url() ?>/login" method="post" class="form-only-line" autocomplete="off">
+        <form action="<?= route_to('login'); ?>" method="post" class="form-only-line" autocomplete="off">
           <?= csrf_field() ?>
           
           <?php if ($config->validFields === ['email']): ?>
@@ -82,13 +82,13 @@
         
         <?php if ($config->activeResetter): ?>
           <p class="mb-1">
-            <a href="<?= base_url() ?>/forgot" class="text-link frog-text">Lupa Kata Sandi?</a>
+            <a href="<?= route_to('forgot'); ?>" class="text-link frog-text">Lupa Kata Sandi?</a>
           </p>
         <?php endif; ?>
         
         <?php if ($config->allowRegistration) : ?>
           <p class="mb-0">
-            <a href="<?= base_url() ?>/register" class="text-center text-link frog-text">Belum Memiliki Akun?</a>
+            <a href="<?= route_to('register'); ?>" class="text-center text-link frog-text">Belum Memiliki Akun?</a>
           </p>
         <?php endif; ?>
       </div>
