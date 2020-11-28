@@ -48,10 +48,10 @@
           <?php endif; ?>
           
           <div class="input-group mt-3 <?= session('errors.password') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control" placeholder="Password" name="password" />
+            <input type="password" class="form-control toggle-password" placeholder="Password" name="password" />
             <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
+              <div class="input-group-text show-password" data-show-password="false">
+                <span class="fas fa-eye"></span>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
               <div class="col-8">
                 <div class="icheck-primary">
                   <input type="checkbox" id="remember" name="remember" <?= old('remember') ? 'checked' : '' ?> />
-                  <label for="remember">
+                  <label for="remember" class="snake-text font-weight-normal">
                     Remember Me
                   </label>
                 </div>
@@ -82,7 +82,7 @@
         
         <?php if ($config->activeResetter): ?>
           <p class="mb-1">
-            <a href="<?= base_url() ?>/forgot" class="text-link frog-text">Lupa Kata Sandi Anda?</a>
+            <a href="<?= base_url() ?>/forgot" class="text-link frog-text">Lupa Kata Sandi?</a>
           </p>
         <?php endif; ?>
         
