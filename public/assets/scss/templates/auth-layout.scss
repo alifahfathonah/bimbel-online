@@ -1,5 +1,6 @@
 @use '../partials/classes' as c;
 @use '../partials/variables' as v;
+@use '../partials/mixin' as m;
 @use "sass:map";
 
 a.text-link {
@@ -13,11 +14,11 @@ a.text-link {
 form.form-only-line {
   .input-group {
     &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      border-bottom: 2px solid map.get(v.$colors, "frog");
-      border-radius: 3px;
+      @include m.line-after-input(.7);
+    }
+    
+    &.active:after {
+      @include m.line-after-input(1);
     }
   }
   
@@ -30,18 +31,31 @@ form.form-only-line {
   input {
     padding-left: 0;
     color: map.get(v.$colors, "shark");
+    transition: all .3s;
+    font-size: 17px;
     
     &:focus, &:hover {
       border: none;
       box-shadow: none;
       background: transparent;
-      font-size: 17px;
-      color: map.get(v.$colors, "frog-1");
+      color: map.get(v.$colors, "snake");
     }
     
     &:placeholder {
       font-size: 16px;
+      color: map.get(v.$colors, "shark-1");
     }
+  }
+}
+
+.frog-btn.outline-btn {
+  background: transparent;
+  border: 1px solid map.get(v.$colors, "frog");
+
+  &:hover, &:active {
+    background: map.get(v.$colors, "frog");
+    color: map.get(v.$colors, "eagle");
+    opacity: 1;
   }
 }
                                                                                                                                                                                                                                                                                                             

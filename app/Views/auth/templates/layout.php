@@ -32,6 +32,8 @@
     <!-- Eruda -->
     <script src="https://cdn.jsdelivr.net/npm/eruda@2.4.1/eruda.js"></script>
     <script>eruda.init()</script>
+    <!-- Auth Script -->
+    <script src="<?= base_url(); ?>/assets/js/templates/auth-layout.js"></script>
   </body>
 </html>
                                                                                                                                                                                                                                                                                                             

@@ -10,7 +10,7 @@
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body eagle-bg snake-text">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Selamat datang kembali, harap login terlebih dahulu.</p>
         
         <?= view('Myth\Auth\Views\_message_block') ?>
         
@@ -19,7 +19,7 @@
           
           <?php if ($config->validFields === ['email']): ?>
             <div class="input-group <?= session('errors.login') ? 'is-invalid' : '' ?>">
-              <input type="text" class="form-control <?= session('errors.login') ? 'is-invalid' : '' ?>" placeholder="Email" name="login" value="<?= old('login') ?>">
+              <input type="text" class="form-control" placeholder="Email" name="login" value="<?= old('login') ?>">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-fw fa-envelope"></span>
@@ -27,13 +27,13 @@
               </div>
             </div>
             <!-- /.input-group -->
-            <div class="invalid-feedback">
+            <div class="invalid-feedback frog-text">
   						<?= session('errors.login') ?>
   					</div>
   					<!-- /.invalid-feedback -->
           <?php else: ?>
             <div class="input-group <?= session('errors.login') ? 'is-invalid' : '' ?>">
-              <input type="text" class="form-control <?= session('errors.login') ? 'is-invalid' : '' ?>" placeholder="Email or Username" name="login" value="<?= old('login') ?>" />
+              <input type="text" class="form-control" placeholder="Email or Username" name="login" value="<?= old('login') ?>" />
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-fw fa-user"></span>
@@ -41,14 +41,14 @@
               </div>
             </div>
             <!-- /.input-group -->
-            <div class="invalid-feedback">
+            <div class="invalid-feedback frog-text">
   						<?= session('errors.login') ?>
   					</div>
   					<!-- /.invalid-feedback -->
           <?php endif; ?>
           
           <div class="input-group mt-3 <?= session('errors.password') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control <?= session('errors.password') ? 'is-invalid' : '' ?>" placeholder="Password" name="password" />
+            <input type="password" class="form-control" placeholder="Password" name="password" />
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -56,12 +56,12 @@
             </div>
           </div>
           <!-- /.input-group -->
-          <div class="invalid-feedback">
+          <div class="invalid-feedback frog-text">
 						<?= session('errors.password') ?>
 					</div>
 					<!-- /.invalid-feedback -->
           
-          <div class="row my-3">
+          <div class="row mt-4 mb-3">
             <?php if ($config->allowRemembering): ?>
               <div class="col-8">
                 <div class="icheck-primary">
@@ -74,7 +74,7 @@
               <!-- /.col -->
             <?php endif; ?>
             <div class="col">
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+              <button type="submit" class="btn frog-btn outline-btn frog-text btn-block">Login</button>
             </div>
             <!-- /.col -->
           </div>
@@ -82,13 +82,13 @@
         
         <?php if ($config->activeResetter): ?>
           <p class="mb-1">
-            <a href="<?= base_url() ?>/forgot" class="text-link frog-text"><?= lang('Auth.forgotYourPassword') ?></a>
+            <a href="<?= base_url() ?>/forgot" class="text-link frog-text">Lupa Kata Sandi Anda?</a>
           </p>
         <?php endif; ?>
         
         <?php if ($config->allowRegistration) : ?>
           <p class="mb-0">
-            <a href="<?= base_url() ?>/register" class="text-center text-link frog-text"><?= lang('Auth.needAnAccount') ?></a>
+            <a href="<?= base_url() ?>/register" class="text-center text-link frog-text">Belum Memiliki Akun?</a>
           </p>
         <?php endif; ?>
       </div>
