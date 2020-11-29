@@ -44,10 +44,10 @@
 					<!-- /.invalid-feedback -->
 					
           <div class="input-group mt-3 <?= session('errors.password') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control" placeholder="<?= lang('Auth.password'); ?>" name="password" value="<?= old('password') ?>">
+            <input type="password" class="form-control toggle-password" placeholder="<?= lang('Auth.password'); ?>" name="password" value="<?= old('password') ?>">
             <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-fw fa-lock"></span>
+              <div class="input-group-text show-password" data-show-password="false">
+                <span class="fas fa-fw fa-eye"></span>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
 					<!-- /.invalid-feedback -->
 					
           <div class="input-group mt-3 <?= session('errors.pass_confirm') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control" placeholder="<?= lang('Auth.repeatPassword'); ?>" name="pass_confirm" value="<?= old('pass_confirm') ?>">
+            <input type="password" class="form-control toggle-password" placeholder="<?= lang('Auth.repeatPassword'); ?>" name="pass_confirm" value="<?= old('pass_confirm') ?>">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-fw fa-lock"></span>
