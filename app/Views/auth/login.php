@@ -10,7 +10,7 @@
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body eagle-bg snake-text">
-        <p class="login-box-msg">Selamat datang kembali, harap login terlebih dahulu.</p>
+        <p class="login-box-msg"><?= lang('Auth.loginTitle'); ?></p>
         
         <?= view('Myth\Auth\Views\_message_block') ?>
         
@@ -19,7 +19,7 @@
           
           <?php if ($config->validFields === ['email']): ?>
             <div class="input-group <?= session('errors.login') ? 'is-invalid' : '' ?>">
-              <input type="text" class="form-control" placeholder="Email" name="login" value="<?= old('login') ?>">
+              <input type="text" class="form-control" placeholder="<?= lang('Auth.email'); ?>" name="login" value="<?= old('login') ?>">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-fw fa-envelope"></span>
@@ -33,7 +33,7 @@
   					<!-- /.invalid-feedback -->
           <?php else: ?>
             <div class="input-group <?= session('errors.login') ? 'is-invalid' : '' ?>">
-              <input type="text" class="form-control" placeholder="Email / Username" name="login" value="<?= old('login') ?>" />
+              <input type="text" class="form-control" placeholder="<?= lang('Auth.emailOrUsername'); ?>" name="login" value="<?= old('login') ?>" />
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-fw fa-user"></span>
@@ -48,7 +48,7 @@
           <?php endif; ?>
           
           <div class="input-group mt-3 <?= session('errors.password') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control toggle-password" placeholder="Password" name="password" />
+            <input type="password" class="form-control toggle-password" placeholder="<?= lang('Auth.password'); ?>" name="password" value="<?= old('password') ?>" />
             <div class="input-group-append">
               <div class="input-group-text show-password" data-show-password="false">
                 <span class="fas fa-eye"></span>
@@ -67,14 +67,14 @@
                 <div class="icheck-primary">
                   <input type="checkbox" id="remember" name="remember" <?= old('remember') ? 'checked' : '' ?> />
                   <label for="remember" class="snake-text font-weight-normal">
-                    Remember Me
+                    <?= lang('Auth.rememberMe'); ?>
                   </label>
                 </div>
               </div>
               <!-- /.col -->
             <?php endif; ?>
             <div class="col">
-              <button type="submit" class="btn frog-btn outline-btn frog-text btn-block">Login</button>
+              <button type="submit" class="btn frog-btn outline-btn frog-text btn-block"><?= lang('Auth.loginAction'); ?></button>
             </div>
             <!-- /.col -->
           </div>
@@ -82,13 +82,13 @@
         
         <?php if ($config->activeResetter): ?>
           <p class="mb-1">
-            <a href="<?= route_to('forgot'); ?>" class="text-link frog-text">Lupa Kata Sandi?</a>
+            <a href="<?= route_to('forgot'); ?>" class="text-link frog-text"><?= lang('Auth.forgotYourPassword'); ?></a>
           </p>
         <?php endif; ?>
         
         <?php if ($config->allowRegistration) : ?>
           <p class="mb-0">
-            <a href="<?= route_to('register'); ?>" class="text-center text-link frog-text">Belum Memiliki Akun?</a>
+            <a href="<?= route_to('register'); ?>" class="text-center text-link frog-text"><?= lang('Auth.needAnAccount'); ?></a>
           </p>
         <?php endif; ?>
       </div>

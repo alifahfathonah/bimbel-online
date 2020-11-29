@@ -10,13 +10,13 @@
   
     <div class="card">
       <div class="card-body register-card-body eagle-bg snake-text">
-        <p class="login-box-msg">Silahkan isi formulir berikut untuk mendaftarkan akun baru.</p>
+        <p class="login-box-msg"><?= lang('Auth.registerTitle'); ?></p>
         
         <?= view('Myth\Auth\Views\_message_block') ?>
         
         <form action="<?= route_to('register') ?>" method="post" autocomplete="off" class="form-only-line">
           <div class="input-group <?= session('errors.email') ? 'is-invalid' : '' ?>">
-            <input type="email" class="form-control" placeholder="Email" name="email" value="<?= old('email') ?>">
+            <input type="text" class="form-control" placeholder="<?= lang('Auth.email'); ?>" name="email" value="<?= old('email') ?>">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-fw fa-envelope"></span>
@@ -30,7 +30,7 @@
 					<!-- /.invalid-feedback -->
           
           <div class="input-group mt-3 <?= session('errors.username') ? 'is-invalid' : '' ?>">
-            <input type="text" class="form-control" placeholder="Username" name="username" value="<?= old('username') ?>">
+            <input type="text" class="form-control" placeholder="<?= lang('Auth.username'); ?>" name="username" value="<?= old('username') ?>">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-fw fa-user"></span>
@@ -44,7 +44,7 @@
 					<!-- /.invalid-feedback -->
 					
           <div class="input-group mt-3 <?= session('errors.password') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control" placeholder="Password" name="password" value="<?= old('password') ?>">
+            <input type="password" class="form-control" placeholder="<?= lang('Auth.password'); ?>" name="password" value="<?= old('password') ?>">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-fw fa-lock"></span>
@@ -58,7 +58,7 @@
 					<!-- /.invalid-feedback -->
 					
           <div class="input-group mt-3 <?= session('errors.pass_confirm') ? 'is-invalid' : '' ?>">
-            <input type="password" class="form-control" placeholder="Retype Password" name="pass_confirm" value="<?= old('pass_confirm') ?>">
+            <input type="password" class="form-control" placeholder="<?= lang('Auth.repeatPassword'); ?>" name="pass_confirm" value="<?= old('pass_confirm') ?>">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-fw fa-lock"></span>
@@ -74,11 +74,11 @@
           <div class="row mt-4">
             <div class="col-8 d-flex align-items-center">
               <a href="<?= route_to('login') ?>" class="text-link frog-text">
-                Sudah Memiliki Akun?
+                <?= lang('Auth.alreadyRegistered'); ?>
               </a>
             </div>
             <div class="col">
-              <button type="submit" class="btn frog-btn outline-btn frog-text btn-block">Register</button>
+              <button type="submit" class="btn frog-btn outline-btn frog-text btn-block"><?= lang('Auth.register'); ?></button>
             </div>
             <!-- /.col -->
           </div>

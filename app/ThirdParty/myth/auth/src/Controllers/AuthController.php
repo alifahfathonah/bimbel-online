@@ -143,8 +143,8 @@ class AuthController extends Controller
     
     $data = [
       'config' => $this->config,
-      'title'  => 'Sign In - Bimbel Online',
-      'page'   => 'login-page'
+      'title'  => 'Sign Up - Bimbel Online',
+      'page'   => 'register-page'
     ];
     
 		return $this->_render($this->config->views['register'], $data);
